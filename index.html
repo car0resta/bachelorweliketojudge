@@ -169,7 +169,8 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.hero-h1,.sec-h2,.nav-logo,.chap-bg,.stat-num,
 .ph-title{font-size:.75rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--paper-dim);margin-bottom:6px;}
 .ph-text{font-size:.85rem;color:var(--muted);line-height:1.7;}
 .phase-cards{display:flex;flex-direction:column;gap:16px;}
-.ph-card{background:var(--ink3);border:1px solid var(--rule-light);border-radius:16px;padding:24px;transition:border-color .3s;}
+.ph-card{background:var(--ink3);border:1px solid var(--rule-light);border-radius:16px;padding:24px;position:relative;overflow:hidden;transition:border-color .3s;}
+.ph-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--az1),var(--az2),var(--mag));}
 .ph-card:hover{border-color:rgba(155,123,206,.35);}
 .ph-card h4{font-size:.75rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--v5);margin-bottom:8px;}
 .ph-card p{font-size:.85rem;color:var(--muted);line-height:1.7;}
