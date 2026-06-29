@@ -41,6 +41,7 @@
   --sans: 'DM Sans', system-ui, sans-serif;
   --title: 'Aileron', Arial, sans-serif;
   --ease: cubic-bezier(.25,.46,.45,.94);
+  
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
@@ -183,8 +184,14 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.hero-h1,.sec-h2,.nav-logo,.chap-bg,.stat-num,
 .q-block{background:var(--ink3);border:1px solid var(--rule-light);border-radius:20px;padding:32px;position:relative;overflow:hidden;transition:transform .3s,border-color .3s;}
 .q-block::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--az1),var(--az2),var(--mag));}
 .q-block:hover{transform:translateY(-4px);border-color:rgba(155,123,206,.3);}
+audio{width:100%;border-radius:12px;display:block;}
+audio::-webkit-media-controls-panel{background:linear-gradient(135deg,rgba(94,157,188,.16),rgba(147,112,227,.14));border-radius:12px;}
+audio::-webkit-media-controls-play-button,audio::-webkit-media-controls-pause-button{background-color:var(--az2);border-radius:50%;color:#fff;}
+audio::-webkit-media-controls-current-time-display,audio::-webkit-media-controls-time-remaining-display{color:var(--paper);font-size:.72rem;}
+audio::-webkit-media-controls-timeline{background:rgba(255,255,255,.12);border-radius:999px;}
+audio::-webkit-media-controls-volume-slider-container,audio::-webkit-media-controls-volume-slider{background:rgba(255,255,255,.08);}
 .q-mark{font-size:4rem;line-height:.6;color:var(--az1);opacity:.3;position:absolute;top:18px;left:24px;font-style:italic;}
-.q-text{font-family:var(--serif);font-style:italic;font-size:1.05rem;line-height:1.8;color:var(--paper);margin-bottom:20px;position:relative;z-index:1;}
+.q-text{font-family:var(--sans);font-style:normal;font-size:1.05rem;line-height:1.8;color:var(--paper);margin-bottom:20px;position:relative;z-index:1;}
 .q-src{display:flex;align-items:center;gap:12px;}
 .q-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--v3),var(--bl1));display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:500;color:#fff;flex-shrink:0;}
 .q-name{font-size:.72rem;font-weight:500;color:var(--paper-dim);}
@@ -507,12 +514,12 @@ footer{background:var(--ink);border-top:1px solid var(--rule-light);padding:48px
 <section id="stimmen" class="sec" aria-label="Testimonials Lehrpersonen">
   <div class="inner">
     <div class="chap-bg" aria-hidden="true">V</div>
-    <div class="ruled rv"><span class="label">Kapitel V · Stimmen aus der Praxis</span></div>
+    <div class="ruled rv"><span class="label">Kapitel V · Stimmen aus dem Workshop</span></div>
     <h2 class="sec-h2 rv d1">Was Lehrpersonen und Lernende sagen.</h2>
     <div class="q-grid">
       <div class="q-block rv d1">
         <div class="q-mark" aria-hidden="true">„</div>
-        <p class="q-text">Ich habe den Workshop insgesamt als interessant, relevant, realitätsnah und strukturiert erlebt. Die Gruppenarbeit fand ich sinnvoll und der Auftrag war klar.</p>
+        <p class="q-text">Ich habe den Workshop insgesamt als interessant, relevant, realitätsnah und strukturiert erlebt. Die Gruppenarbeit fand ich sinnvoll und der Auftrag war klar.  Besonders wertvoll waren die praxisnahen Denkanstösse für einen reflektierten Umgang mit sozialen Medien. Insgesamt ein professionell durchgeführter und sehr bereichernder Workshop.</p>
         <div class="q-src">
           <div class="q-avatar" aria-hidden="true">CS</div>
           <div><div class="q-name">Chantal Schnyder</div><span class="q-role">Lehrperson, Klasse R3B</span></div>
@@ -520,49 +527,100 @@ footer{background:var(--ink);border-top:1px solid var(--rule-light);padding:48px
       </div>
       <div class="q-block rv d2">
         <div class="q-mark" aria-hidden="true">„</div>
-        <p class="q-text">Ein professionell durchgeführter und sehr bereichernder Workshop. Besonders die gelungene Vermittlung eines reflektierten Umgangs mit sozialen Medien ist hervorzuheben.</p>
+        <p class="q-text">Die Workshopleitende überzeugte durch ihre professionelle, wertschätzende Art und schuf eine angenehme Lernatmosphäre. Der Workshop war klar strukturiert, hervorragend vorbereitet und altersgerecht gestaltet. Die abwechslungsreichen Materialien sowie das Kahoot förderten die aktive Mitarbeit der Schülerinnen und Schüler.
+</p>
         <div class="q-src">
           <div class="q-avatar" aria-hidden="true">GE</div>
           <div><div class="q-name">Géraldine Eliasson</div><span class="q-role">Lehrperson, Klasse R1A</span></div>
         </div>
       </div>
-      <div class="q-block rv d3">
-        <div class="q-mark" aria-hidden="true">„</div>
-        <p class="q-text">Die Workshopleitende überzeugte durch ihre professionelle und wertschätzende Art. Durch die persönliche Ansprache schuf sie eine angenehme und vertrauensvolle Lernatmosphäre.</p>
-        <div class="q-src">
-          <div class="q-avatar" aria-hidden="true">GE</div>
-          <div><div class="q-name">Géraldine Eliasson</div><span class="q-role">Lehrperson, Klasse R1A</span></div>
-        </div>
+      
       </div>
     </div>
     <div class="q-grid" style="margin-top:24px;">
       <div class="q-block rv d1">
         <div class="q-mark" aria-hidden="true">▶</div>
-        <p class="q-text">Video-Statement: Eine Schülerin beschreibt, wie sie Deepfakes besser erkennen konnte und warum der Workshop sie zum reflektierten Umgang mit KI motiviert hat.</p>
+        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;margin-bottom:16px;">
+          <iframe src="https://www.youtube.com/embed/xLa9xX5Xqnw?si=HLQjk0jxwyLK8gc-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+        </div>
+        <p class="q-text" style="margin-bottom:10px;">Das sagt Valdet über den Workshop</p>
         <div class="q-src">
           <div class="q-avatar" aria-hidden="true">V</div>
-          <div><div class="q-name">Video-Statement</div><span class="q-role">Einzelne Schülerin / Einzelner Schüler</span></div>
+          <div><div class="q-name">Video-Statement</div><span class="q-role">Valdet, S2b</span></div>
         </div>
       </div>
       <div class="q-block rv d2">
-        <div class="q-mark" aria-hidden="true">♫</div>
-        <p class="q-text">Audio-Statement: Ein Teilnehmender berichtet über die Erfahrung, ein eigenes Podcast-Format mit KI-Unterstützung zu entwickeln und kritisch zu reflektieren.</p>
+        <div class="q-mark" aria-hidden="true">▶</div>
+        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;margin-bottom:16px;">
+          <iframe src="https://www.youtube.com/embed/mYRmfM5sJr0?si=i5M-c9DPgdwAuExP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+        </div>
+        <p class="q-text" style="margin-bottom:10px;">Das sagen Chiara und Nessrin über den Workshop</p>
         <div class="q-src">
-          <div class="q-avatar" aria-hidden="true">A</div>
-          <div><div class="q-name">Audio-Statement</div><span class="q-role">Einzelne Schülerin / Einzelner Schüler</span></div>
+          <div class="q-avatar" aria-hidden="true">CN</div>
+          <div><div class="q-name">Video-Statement</div><span class="q-role">Chiara und Nessrin, S1a</span></div>
         </div>
       </div>
       <div class="q-block rv d3">
-        <div class="q-mark" aria-hidden="true">✦</div>
-        <p class="q-text">Beispielprodukte aus dem Probeworkshop: ein Podcast, eine Grafik und ein Reel zeigen, wie die Teilnehmenden Inhalte ohne und mit KI-Unterstützung umgesetzt haben.</p>
-        <div class="q-src">
-          <div class="q-avatar" aria-hidden="true">P</div>
-          <div><div class="q-name">Beispielprodukte</div><span class="q-role">Podcast · Grafik · Reel</span></div>
+        <div class="q-mark" aria-hidden="true">▶</div>
+        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;margin-bottom:16px;">
+          <iframe src="https://www.youtube.com/embed/5rjUN6aua0s?si=ROV0V0ihe-0E6Q8p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
         </div>
+        <p class="q-text" style="margin-bottom:10px;">Das sagt Giorgi über den Workshop</p>
+        <div class="q-src">
+          <div class="q-avatar" aria-hidden="true">G</div>
+          <div><div class="q-name">Video-Statement</div><span class="q-role">Giorgi</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="q-grid" style="margin-top:24px;">
+      <div class="q-block rv d1">
+        <div class="q-mark" aria-hidden="true">♫</div>
+        <p class="q-text" style="margin-bottom:12px;">Das sagt Barbara Schlegel über den Workshop</p>
+        <audio controls style="width:100%;">
+          <source src="Testemonials/Barbara Schlegel.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+      <div class="q-block rv d2">
+        <div class="q-mark" aria-hidden="true">♫</div>
+        <p class="q-text" style="margin-bottom:12px;">Das sagt Asmin über den Workshop</p>
+        <audio controls style="width:100%;">
+          <source src="Testemonials/Asmin.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+      <div class="q-block rv d3">
+        <div class="q-mark" aria-hidden="true">♫</div>
+        <p class="q-text" style="margin-bottom:12px;">Das sagt Ardid über den Workshop</p>
+        <audio controls style="width:100%;">
+          <source src="Testemonials/Ardid.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+    </div>
+    <div class="q-grid" style="margin-top:24px;">
+      <div class="q-block rv d1">
+        <div class="q-mark" aria-hidden="true">♫</div>
+        <p class="q-text" style="margin-bottom:12px;">Das sagt Joel über den Workshop</p>
+        <audio controls style="width:100%;">
+          <source src="Testemonials/Joel.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+      <div class="q-block rv d2">
+        <div class="q-mark" aria-hidden="true">♫</div>
+        <p class="q-text" style="margin-bottom:12px;">Das sagt Kaan über den Workshop</p>
+        <audio controls style="width:100%;">
+          <source src="Testemonials/Kaan.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+      <div class="q-block rv d3">
+        <div class="q-mark" aria-hidden="true">♫</div>
+        <p class="q-text" style="margin-bottom:12px;">Das sagt Steven über den Workshop</p>
+        <audio controls style="width:100%;">
+          <source src="Testemonials/Steven.mp3" type="audio/mpeg">
+        </audio>
       </div>
     </div>
   </div>
 </section>
+
 
 <!-- PRODUKTBEISPIELE -->
 <section id="produktbeispiele" class="sec" aria-label="Produktbeispiele aus dem Probeworkshop">
@@ -571,33 +629,52 @@ footer{background:var(--ink);border-top:1px solid var(--rule-light);padding:48px
     <div class="ruled rv"><span class="label">Kapitel VI · Produktbeispiele</span></div>
     <h2 class="sec-h2 rv d1">Beispiele aus dem Probeworkshop.</h2>
     <div class="q-grid">
+
+      <!-- REEL -->
       <div class="q-block rv d1">
-        <div class="q-mark" aria-hidden="true">🎙</div>
-        <p class="q-text">Podcast: Ein kurzes Audioformat über Social-Media-Influencer, in dem die Teilnehmenden Argumente für und gegen KI-generierte Inhalte vergleichen.</p>
-        <div class="q-src">
-          <div class="q-avatar" aria-hidden="true">P</div>
-          <div><div class="q-name">Podcast-Beispiel</div><span class="q-role">Audioformat · KI-gestützt und ohne KI</span></div>
-        </div>
-      </div>
-      <div class="q-block rv d2">
-        <div class="q-mark" aria-hidden="true">◼</div>
-        <p class="q-text">Grafik: Eine visuelle Darstellung zu Deepfakes und Medienkritik, entwickelt als Bild-Post mit klarer Struktur und bewusst gesetzten Gestaltungselementen.</p>
-        <div class="q-src">
-          <div class="q-avatar" aria-hidden="true">G</div>
-          <div><div class="q-name">Grafik-Beispiel</div><span class="q-role">Bildformat · Informationsgrafik</span></div>
-        </div>
-      </div>
-      <div class="q-block rv d3">
         <div class="q-mark" aria-hidden="true">▶</div>
-        <p class="q-text">Reel: Ein kurzes Video mit schnellen Schnitten, das zeigt, wie Inhalte über Social Media erzeugt, bearbeitet und kritisch bewertet werden können.</p>
+        <div style="position:relative;padding-bottom:177.78%;height:0;overflow:hidden;border-radius:12px;margin-bottom:16px;">
+          <iframe src="https://www.youtube.com/embed/w-X6EbxNWyw" title="Reel-Beispiel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:12px;"></iframe>
+        </div>
+        <p class="q-text" style="margin-bottom:10px;">Reel: Kurzfilm ohne KI Beispiel aus dem Probeworkshop.</p>
         <div class="q-src">
-          <div class="q-avatar" aria-hidden="true">R</div>
-          <div><div class="q-name">Reel-Beispiel</div><span class="q-role">Videoformat · Kurzfilm / Social Media</span></div>
+      
         </div>
       </div>
+
+      <!-- GRAFIK -->
+<div class="q-block rv d2">
+  <div class="q-mark" aria-hidden="true">◼</div>
+  <p class="q-text">Grafik: Beispiel aus dem Probeworkshop zum Thema FOMO</p>
+
+  <img 
+    src="Testemonials/Grafik_1.jpeg"
+    alt="Beispielgrafik zum Thema FOMO"
+    style="width:100%; border-radius:10px; margin-top:10px;"/>
+
+  <div class="q-src">
+    
+    <div>
+   
     </div>
   </div>
-</section>
+</div>
+
+<!-- PODCAST -->
+<div class="q-block rv d3">
+  <div class="q-mark" aria-hidden="true">🎙</div>
+
+  <p class="q-text" style="margin-bottom:12px;">
+    Podcast: Beispiel aus dem Probeworkshop.
+  </p>
+  <audio controls style="width:100%; margin-bottom:10px;">
+    <source src="Testemonials/Weekly struggle_Podcast.mp3" type="audio/mpeg">
+  </audio>
+    </div>
+  </div>
+      
+  </div>
+</div>
 
 <!-- ERKENNTNISSE -->
 <section id="erkenntnisse" class="sec" aria-label="Zentrale Erkenntnisse">
@@ -639,63 +716,99 @@ footer{background:var(--ink);border-top:1px solid var(--rule-light);padding:48px
     <div class="dl-grid">
       <div class="dl-card rv d1">
         <div class="dl-icon" aria-hidden="true">01</div>
-        <div class="dl-lbl">Materialien</div>
-        <div class="dl-title"> Reel-Package: Zeitmanagement, Leitfaden mit & ohne KI</div>
-        <a href="#" download class="dl-a">Herunterladen →</a>
+        <div class="dl-lbl">Dokumentation</div>
+        <div class="dl-title">Ausführliche Dokumentation</div>
+        <a href="We_Like_to_Judge_Dokumentation.pdf" download class="dl-a">Herunterladen →</a>
       </div>
       <div class="dl-card rv d2">
         <div class="dl-icon" aria-hidden="true">02</div>
         <div class="dl-lbl">Materialien</div>
-        <div class="dl-title">Podcast-Package: Zeitmanagement, Leitfaden mit & ohne KI</div>
-        <a href="#" download class="dl-a">Herunterladen →</a>
+        <div class="dl-title">Reel-Package: Zeitmanagement, Leitfaden mit & ohne KI</div>
+        <a href="PDF/Reel_Package.pdf" download class="dl-a">Herunterladen →</a>
       </div>
-       <div class="dl-card rv d3">
+      <div class="dl-card rv d3">
         <div class="dl-icon" aria-hidden="true">03</div>
         <div class="dl-lbl">Materialien</div>
-        <div class="dl-title">Social Media Grafik Package: Zeitmanagement, Leitfaden mit & ohne KI</div>
-        <a href="#" download class="dl-a">Herunterladen →</a>
+        <div class="dl-title">Podcast-Package: Zeitmanagement, Leitfaden mit & ohne KI</div>
+        <a href="PDF/Podcast_Package.pdf" download class="dl-a">Herunterladen →</a>
       </div>
       <div class="dl-card rv d4">
         <div class="dl-icon" aria-hidden="true">04</div>
         <div class="dl-lbl">Materialien</div>
-        <div class="dl-title">Prompting-Leitfaden</div>
-        <a href="#" download class="dl-a">Herunterladen →</a>
+        <div class="dl-title">Social Media Grafik Package: Zeitmanagement, Leitfaden mit & ohne KI</div>
+        <a href="PDF/Grafik_Package.pdf" download class="dl-a">Herunterladen →</a>
       </div>
       <div class="dl-card rv d5">
         <div class="dl-icon" aria-hidden="true">05</div>
         <div class="dl-lbl">Materialien</div>
-        <div class="dl-title">Influencer-Package: Recherchebogen zu den Themen</div>
-        <a href="#" download class="dl-a">Herunterladen →</a>
+        <div class="dl-title">Prompting-Leitfaden</div>
+        <a href="PDF/Leitfaden%20Prompts%20-%20Kopie.pdf" download class="dl-a">Herunterladen →</a>
       </div>
-        <div class="dl-card rv d6">
+      <div class="dl-card rv d6">
         <div class="dl-icon" aria-hidden="true">06</div>
         <div class="dl-lbl">Materialien</div>
-        <div class="dl-title">Social Media-Package: Recherchebogen zu den Themen</div>
-        <a href="#" download class="dl-a">Herunterladen →</a>
+        <div class="dl-title">Influencer-Package: Recherchebogen zu den Themen</div>
+        <a href="PDF/Influencer_Package_recherchebogen.pdf" download class="dl-a">Herunterladen →</a>
       </div>
       <div class="dl-card rv d7">
         <div class="dl-icon" aria-hidden="true">07</div>
         <div class="dl-lbl">Materialien</div>
-        <div class="dl-title">Gaming-Package: Recherchebogen zu den Themen</div>
-        <a href="#" download class="dl-a">Herunterladen →</a>
+        <div class="dl-title">Social Media-Package: Recherchebogen zu den Themen</div>
+        <a href="PDF/Social%20Media_Package_Recherchebogen.pdf" download class="dl-a">Herunterladen →</a>
       </div>
       <div class="dl-card rv d8">
         <div class="dl-icon" aria-hidden="true">08</div>
         <div class="dl-lbl">Materialien</div>
-        <div class="dl-title">Vokabularliste</div>
-        <a href="#" download class="dl-a">Herunterladen →</a>
+        <div class="dl-title">Gaming-Package: Recherchebogen zu den Themen</div>
+        <a href="PDF/Gaming_Package_Recherchebogen.pdf" download class="dl-a">Herunterladen →</a>
       </div>
       <div class="dl-card rv d9">
         <div class="dl-icon" aria-hidden="true">09</div>
         <div class="dl-lbl">Materialien</div>
-        <div class="dl-title">Quiz zum Thema</div>
-        <a href="#" download class="dl-a">Herunterladen →</a>
+        <div class="dl-title">Vokabularliste</div>
+        <a href="PDF/Vokabularliste.pdf" download class="dl-a">Herunterladen →</a>
       </div>
       <div class="dl-card rv d10">
         <div class="dl-icon" aria-hidden="true">10</div>
+        <div class="dl-lbl">Materialien</div>
+        <div class="dl-title">Quiz zum Thema</div>
+        <a href="PDF/Workshop%20Quiz%20-%20Kopie.pdf" download class="dl-a">Herunterladen →</a>
+      </div>
+      <div class="dl-card rv d11">
+        <div class="dl-icon" aria-hidden="true">11</div>
         <div class="dl-lbl">Factsheet</div>
         <div class="dl-title">Factsheet zu KI & Medienkritik (für Schüler:innen)</div>
-        <a href="#" download class="dl-a">Herunterladen →</a>
+        <a href="PDF/Factsheet_Workshop%20-%20Kopie.pdf" download class="dl-a">Herunterladen →</a>
+      </div>
+      <div class="dl-card rv d12">
+        <div class="dl-icon" aria-hidden="true">12</div>
+        <div class="dl-lbl">Präsentation</div>
+        <div class="dl-title">Präsentation zu den Theorieblöcken KI & Medienkritik </div>
+        <a href="https://canva.link/lgqqqd75doao8hi" class="dl-a">Öffnen →</a>
+      </div>
+      <div class="dl-card rv d13">
+        <div class="dl-icon" aria-hidden="true">13</div>
+        <div class="dl-lbl">Quiz</div>
+        <div class="dl-title">Kahoot Teil 1</div>
+        <a href="https://create.kahoot.it/share/we-like-to-judge-workshop-ki-oder-real-teil-1/ba65b699-ebe6-4e64-a531-8ee0c542071f">Öffnen →</a>
+      </div>
+      <div class="dl-card rv d14">
+        <div class="dl-icon" aria-hidden="true">14</div>
+        <div class="dl-lbl">Quiz</div>
+        <div class="dl-title">Kahoot Teil 2</div>
+        <a href="https://create.kahoot.it/share/we-like-to-judge-workshop-ki-oder-real-teil-2/52ef60c4-7f3f-4466-be3d-60808896e9a9" class="dl-a">Öffnen →</a>
+      </div>
+      <div class="dl-card rv d15">
+        <div class="dl-icon" aria-hidden="true">15</div>
+        <div class="dl-lbl">Umfrage</div>
+        <div class="dl-title">Pre-Umfrage</div>
+        <a href="https://forms.gle/AP6wNyJE4AZy7jzk7" class="dl-a">Öffnen →</a>
+      </div>
+      <div class="dl-card rv d16">
+        <div class="dl-icon" aria-hidden="true">16</div>
+        <div class="dl-lbl">Umfrage</div>
+        <div class="dl-title">Post-Umfrage</div>
+        <a href="https://forms.gle/763nfrraE82Z55bj9" class="dl-a">Öffnen →</a>
       </div>
     </div>
   </div>
